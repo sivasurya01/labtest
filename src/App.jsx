@@ -94,8 +94,8 @@ function App() {
           </div>
         </div>
         <div>
-          <div className="h-100">
-            <Button variant="outline-secondary mt-4" onClick={handleShow}>
+          <div className="h-100 p-2">
+            <Button variant="outline-secondary mt-4 ml-2" onClick={handleShow}>
               Save Segmnet
             </Button>
           </div>
@@ -105,7 +105,7 @@ function App() {
           placement={"end"}
           show={show}
           onHide={handleClose}
-          backdrop="static"
+          // backdrop="static"
         >
           <Offcanvas.Header className="bgcolorset" closeButton>
             <Offcanvas.Title className="text-white">
@@ -232,7 +232,9 @@ function App() {
                     <Button variant="primary">Add new schema</Button>
                   </div>
                   <div>
-                    <Button variant="light">Cancel</Button>
+                    <Button variant="light" onClick={handleClose}>
+                      Cancel
+                    </Button>
                   </div>
                 </div>
               </Form>
