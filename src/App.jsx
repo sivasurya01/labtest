@@ -39,34 +39,34 @@ function App() {
     }
   };
 
-  const handleSaveSegment = async () => {
-    const segmentData = {
-      segment_name: segmentName,
-      schema: rowCount.map((schemaValue) => ({
-        [schemaValue]: schemaOptions.find(
-          (option) => option.value === schemaValue
-        ).label,
-      })),
-    };
+  // = async () => {
+  //   const segmentData = {
+  //     segment_name: segmentName,
+  //     schema: rowCount.map((schemaValue) => ({
+  //       [schemaValue]: schemaOptions.find(
+  //         (option) => option.value === schemaValue
+  //       ).label,
+  //     })),
+  //   };
 
-    console.log(segmentData);
-    // Your fetch request
-    fetch("https://webhook.site/4646f2ef-9ef5-45a3-8ce6-8357840b8559", {
-      method: "POST",
-      headers: {
-        "Api-Key": "4646f2ef-9ef5-45a3-8ce6-8357840b8559",
-        "Content-Type": "UIdesginlication/json",
-      },
-      body: JSON.stringify(segmentData),
-    })
-      .then((response) => response.json())
-      .then((responseData) => {
-        console.log("Webhook response:", responseData);
-      })
-      .catch((error) => {
-        console.error("Error sending data to webhook:", error.message);
-      });
-  };
+  //   console.log(segmentData);
+  //   // Your fetch request
+  //   fetch("https://webhook.site/4646f2ef-9ef5-45a3-8ce6-8357840b8559", {
+  //     method: "POST",
+  //     headers: {
+  //       "Api-Key": "4646f2ef-9ef5-45a3-8ce6-8357840b8559",
+  //       "Content-Type": "UIdesginlication/json",
+  //     },
+  //     body: JSON.stringify(segmentData),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((responseData) => {
+  //       console.log("Webhook response:", responseData);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error sending data to webhook:", error.message);
+  //     });
+  // };
 
   const handleRemoveRow = (index) => {
     console.log(index);
@@ -229,9 +229,7 @@ function App() {
 
                 <div className="bottomset">
                   <div>
-                    <Button variant="primary" onClick={handleSaveSegment}>
-                      Add new schema
-                    </Button>
+                    <Button variant="primary">Add new schema</Button>
                   </div>
                   <div>
                     <Button variant="light">Cancel</Button>
