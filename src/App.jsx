@@ -227,7 +227,7 @@ function App() {
                   </div>
                 </div>
 
-                <div className="bottomset">
+                <div className="d-flex gap-2">
                   <div>
                     <Button variant="primary">Add new schema</Button>
                   </div>
