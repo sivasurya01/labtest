@@ -103,7 +103,7 @@ function App() {
         <div>
           <div className="h-100 p-2">
             <Button variant="outline-secondary mt-4 ml-2" onClick={handleShow}>
-              Save Segmnet
+              Save Segment
             </Button>
           </div>
         </div>
